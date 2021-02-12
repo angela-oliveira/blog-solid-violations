@@ -9,7 +9,7 @@ public class PostagemsServiceImpl implements PostagemService {
     private PostagemDAO postagemDAO = new PostagemDAO("banco.db");
 	@Override
 	public void adicionarPostagem(Postagem postagem) {
-		postagemDAO.addPostagemPublica(postagem);
+		postagemDAO.addPostagem(postagem);
 		
 	}
 
