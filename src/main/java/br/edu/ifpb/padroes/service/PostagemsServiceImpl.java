@@ -6,7 +6,11 @@ import br.edu.ifpb.padroes.modelo.PostagemResposta;
 
 public class PostagemsServiceImpl implements PostagemService {
 	
-    private PostagemDAO postagemDAO = new PostagemDAO("banco.db");
+    private PostagemDAO postagemDAO;
+    
+    public void PostagemServiceImpl(PostagemDAO postagemDAO) {
+        this.postagemDAO = postagemDAO;
+    }
 	@Override
 	public void adicionarPostagem(Postagem postagem) {
 		postagemDAO.addPostagem(postagem);
